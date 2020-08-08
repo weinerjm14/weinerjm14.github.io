@@ -1,11 +1,11 @@
-@import "libs/vars";
-@import "libs/functions";
-@import "libs/mixins";
-@import "libs/vendor";
-@import "libs/breakpoints";
-@import "libs/html-grid";
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
-@import url("fontawesome-all.min.css");
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+@import 'libs/html-grid';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700');
+@import url('fontawesome-all.min.css');
 
 /*
 	Miniport by HTML5 UP
@@ -157,7 +157,7 @@ q {
 
   &:before,
   &:after {
-    content: "";
+    content: '';
     content: none;
   }
 }
@@ -212,8 +212,8 @@ body {
     *,
     *:before,
     *:after {
-      @include vendor("animation", "none !important");
-      @include vendor("transition", "none !important");
+      @include vendor('animation', 'none !important');
+      @include vendor('transition', 'none !important');
     }
   }
 }
@@ -222,7 +222,7 @@ body,
 input,
 textarea,
 select {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.85em;
   color: #888;
   font-weight: 300;
@@ -230,7 +230,7 @@ select {
 }
 
 a {
-  @include vendor("transition", "color .2s ease-in-out");
+  @include vendor('transition', 'color .2s ease-in-out');
   color: #43b3e0;
   text-decoration: underline;
 
@@ -374,7 +374,7 @@ footer {
     width: (1200px * 0.75);
   }
 
-  @include breakpoint("<=xlarge") {
+  @include breakpoint('<=xlarge') {
     width: 1200px;
 
     &.medium {
@@ -382,7 +382,7 @@ footer {
     }
   }
 
-  @include breakpoint("<=large") {
+  @include breakpoint('<=large') {
     width: 960px;
 
     &.medium {
@@ -390,7 +390,7 @@ footer {
     }
   }
 
-  @include breakpoint("<=medium") {
+  @include breakpoint('<=medium') {
     width: 100%;
 
     &.medium {
@@ -398,7 +398,7 @@ footer {
     }
   }
 
-  @include breakpoint("<=small") {
+  @include breakpoint('<=small') {
     width: 100%;
     max-width: calc(100% - 30px);
 
@@ -413,20 +413,20 @@ footer {
 .row {
   @include html-grid((25px, 25px));
 
-  @include breakpoint("<=xlarge") {
-    @include html-grid((25px, 25px), "xlarge");
+  @include breakpoint('<=xlarge') {
+    @include html-grid((25px, 25px), 'xlarge');
   }
 
-  @include breakpoint("<=large") {
-    @include html-grid((25px, 25px), "large");
+  @include breakpoint('<=large') {
+    @include html-grid((25px, 25px), 'large');
   }
 
-  @include breakpoint("<=medium") {
-    @include html-grid((25px, 25px), "medium");
+  @include breakpoint('<=medium') {
+    @include html-grid((25px, 25px), 'medium');
   }
 
-  @include breakpoint("<=small") {
-    @include html-grid((15px, 15px), "small");
+  @include breakpoint('<=small') {
+    @include html-grid((15px, 15px), 'small');
   }
 }
 
@@ -440,14 +440,14 @@ form {
     margin: 0 0 0.5em 0;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
   select,
   textarea {
     @include vendor(
-      "transition",
-      ("background .2s ease-in-out", "box-shadow .2s ease-in-out")
+      'transition',
+      ('background .2s ease-in-out', 'box-shadow .2s ease-in-out')
     );
     -webkit-appearance: none;
     display: block;
@@ -456,7 +456,7 @@ form {
     font-size: 1em;
     border-radius: 8px;
     border: solid 1px #ddd;
-    background: #fff;
+    background: #9cadce;
     color: #bbb;
     box-shadow: inset 0px 2px 3px 1px rgba(0, 0, 0, 0.05),
       0px 1px 0px 0px rgba(255, 255, 255, 0.025);
@@ -589,19 +589,19 @@ article:last-child {
 
 /* Button */
 
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
 button,
 .button {
   @include vendor(
-    "background-image",
+    'background-image',
     (
       'url("images/bg.png")',
-      "linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2))"
+      'linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2))'
     )
   );
-  @include vendor("transition", "background-color .2s ease-in-out");
+  @include vendor('transition', 'background-color .2s ease-in-out');
   -webkit-appearance: none;
   position: relative;
   display: inline-block;
@@ -688,7 +688,7 @@ ul.social {
     padding-left: 0;
 
     a {
-      @include vendor("transition", "top .2s ease-in-out");
+      @include vendor('transition', 'top .2s ease-in-out');
       display: block;
       width: 48px;
       height: 48px;
@@ -698,13 +698,13 @@ ul.social {
 
       &:before {
         @include vendor(
-          "background-image",
+          'background-image',
           (
             'url("images/bg.png")',
-            "linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2))"
+            'linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2))'
           )
         );
-        @include vendor("transition", "background-color .2s ease-in-out");
+        @include vendor('transition', 'background-color .2s ease-in-out');
         background-color: #444;
         border-radius: 6px;
         box-shadow: inset 0px 0px 0px 1px #282828,
@@ -869,7 +869,7 @@ ul.actions {
 
   &.brands {
     &:before {
-      font-family: "Font Awesome 5 Brands";
+      font-family: 'Font Awesome 5 Brands';
     }
   }
 
@@ -888,7 +888,7 @@ ul.actions {
 /* Wrappers */
 
 .wrapper {
-  background-image: url("images/bg.png");
+  background-image: url('images/bg.png');
   box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05),
     inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
   padding: 8em 0 8em 0;
@@ -896,21 +896,21 @@ ul.actions {
 
   &.style1 {
     background-image: none;
-    background-color: #fff;
+    background-color: #9cadce;
   }
 
   &.style2 {
-    background-color: #fafafa;
+    background-color: #9cadce;
     text-shadow: 1px 1px 0px #fff;
   }
 
   &.style3 {
-    background-color: #f4f4f4;
+    background-color: #9cadce;
     text-shadow: 1px 1px 0px #fff;
   }
 
   &.style4 {
-    background-color: #303030;
+    background-color: #9cadce;
     color: #999;
     text-shadow: -1px -1px 0px #181818;
 
@@ -924,13 +924,13 @@ ul.actions {
     }
 
     form {
-      input[type="text"],
-      input[type="password"],
+      input[type='text'],
+      input[type='password'],
+      input[type='email'],
       select,
       textarea {
         border: none;
-        background: #282828;
-
+        background: #9cadce;
         &:focus {
           background: #252525;
         }
@@ -965,7 +965,7 @@ ul.actions {
   }
 
   a {
-    @include vendor("transition", "background-color .2s ease-in-out");
+    @include vendor('transition', 'background-color .2s ease-in-out');
     position: relative;
     display: block;
     color: #fff;
@@ -987,7 +987,7 @@ ul.actions {
       background: #484848;
 
       &:before {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         bottom: -0.6em;
@@ -1068,7 +1068,7 @@ body > article {
   }
 
   a {
-    @include vendor("transition", "color .2s ease-in-out");
+    @include vendor('transition', 'color .2s ease-in-out');
     color: inherit;
 
     &:hover {
@@ -1079,7 +1079,7 @@ body > article {
 
 /* Large */
 
-@include breakpoint("<=large") {
+@include breakpoint('<=large') {
   /* Basic */
 
   body {
@@ -1125,7 +1125,7 @@ body > article {
 
 /* Medium */
 
-@include breakpoint("<=medium") {
+@include breakpoint('<=medium') {
   /* Articles */
 
   #top {
@@ -1140,7 +1140,7 @@ body > article {
 
 /* Small */
 
-@include breakpoint("<=small") {
+@include breakpoint('<=small') {
   /* Basic */
 
   body {
@@ -1200,9 +1200,9 @@ body > article {
 
   /* Button */
 
-  input[type="button"],
-  input[type="submit"],
-  input[type="reset"],
+  input[type='button'],
+  input[type='submit'],
+  input[type='reset'],
   button,
   .button {
     text-align: center;
